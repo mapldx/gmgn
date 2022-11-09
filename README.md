@@ -1,2 +1,24 @@
-# yearin-gmgn
-yearin.gmgn.today, inspired by Spotify Wrapped, allows Web 3 users to view a compilation of data about their cross-chain activity over the past year and invites them to share it on social media.
+# yearin.gmgn.day
+
+## Project setup
+```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
+
+### Compiles and minifies for production
+```
+yarn build
+```
+
+### Lints and fixes files
+```
+yarn lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
