@@ -4,7 +4,9 @@ import VueMeta from 'vue-meta';
 import HomeView from '../views/HomeView.vue';
 
 Vue.use(VueRouter);
-Vue.use(VueMeta);
+Vue.use(VueMeta, {
+  refreshOnceOnNavigation: true,
+});
 
 const routes = [
   {
