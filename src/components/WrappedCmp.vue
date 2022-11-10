@@ -534,7 +534,7 @@ export default {
     generateData(month) {
       var i = 1;
       var series = [];
-      while (i < 31) {
+      while (i <= 31) {
         var x = `${i}`.toString();
         var y = 0;
         for (var j = 0; j < this.response.length; j += 1) {
