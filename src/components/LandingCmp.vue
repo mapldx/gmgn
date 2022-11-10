@@ -78,7 +78,7 @@
 
           <form class="mt-8 grid grid-cols-6 gap-6" @submit.stop.prevent="submit">
             <div class="col-span-6">
-              <label for="Email" class="block text-md font-medium text-gray-700">
+              <label for="Email" class="block text-lg font-medium text-gray-700">
                 Your Ethereum Wallet Address
 
               <input
@@ -86,18 +86,18 @@
                 id="address"
                 name="address"
                 v-model="address"
-                class="mt-2 w-full rounded-md border-gray-300 bg-white text-md text-gray-700 shadow-sm placeholder-gray-300"
+                class="mt-2 w-full rounded-md border-gray-300 bg-white text-xl text-gray-700 shadow-sm placeholder-gray-300"
                 placeholder="0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
               />
               </label>
-              <p class="mt-2 leading-relaxed text-gray-400 text-sm">
+              <p class="mt-2 leading-relaxed text-gray-500 text-sm">
                 Supported formats: 0x (0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045), ENS (vitalik.eth), Crossbell (diygod.csb), Lens (stani.lens)
               </p>
             </div>
 
             <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
               <button
-                class="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
+                class="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-bold text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
                 type="submit"
                 @click.stop.prevent="submit()"
               >
@@ -112,20 +112,13 @@
           </form>
 
           <div class="col-span-6">
-            <p class="mt-8 text-sm font-bold text-gray-500">
+            <p class="mt-6 text-xs text-gray-400">
+              The blockchain is a digitally-available, publicly-accessible record of your transactions. By using our service, you agree that the data provided is on an "as is" basis. This service does not require the a wallet connection. Thus, the service does not make any on-chain changes, nor does it have the permission or ability to fulfill, transact, or transfer any form of assets. At no time does it hold or possess, even beneficially, the assets within the queried address.
+            </p>
+            <p class="mt-4 text-sm font-bold text-gray-500">
               An <i>experimental</i> product of 🍕 from Manila, Philippines © 2022 mapldx
             </p>
-            <p class="mt-6 text-xs text-gray-400">
-              The blockchain is a digitally-available, publicly-accessible record of your transactions. By using our service, you agree that the data provided is on an "as is" basis.
-            </p>
-            <p class="mt-2 text-xs text-gray-400">
-              This service does not have the permission or ability to fulfill, transact, nor transfer any form of assets. At no time does it hold or possess, even beneficially, the assets within the queried address.
-            </p>
-            <p class="mt-2 text-xs text-gray-400">
-              We are not affiliated, associated, authorized, endorsed by, or in any way officially connected with Spotify Technology S.A. All names, logos, images, and brands are property of their respective owners.
-            </p>
           </div>
-
         </div>
       </main>
     </div>

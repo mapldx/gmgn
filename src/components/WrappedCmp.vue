@@ -28,7 +28,7 @@
         <div class="sm:flex sm:items-center sm:justify-between">
           <div class="text-center sm:text-left">
             <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl">
-              ☀️ gm/gn, 
+              <a href="/">☀️ gm/gn,</a>
             </h1>
 
             <p class="mt-1.5 text-md text-gray-500">
@@ -402,7 +402,7 @@
           The blockchain is a digitally-available, publicly-accessible record of your transactions. By using our service, you agree that the data provided is on an "as is" basis.
         <br>
         <br>
-          This service does not have the permission or ability to fulfill, transact, nor transfer any form of assets. At no time does it hold or possess, even beneficially, the assets within the queried address.
+          This service does not require the a wallet connection. Thus, the service does not make any on-chain changes, nor does it have the permission or ability to fulfill, transact, or transfer any form of assets. At no time does it hold or possess, even beneficially, the assets within the queried address.
         <br>
         <br>
           We are not affiliated, associated, authorized, endorsed by, or in any way officially connected with any names, logos, images, and brands mentioned and presented on this page, unless otherwise specified. All names, logos, images, and brands are property of their respective owners.
@@ -724,7 +724,7 @@ export default {
 
         /* eslint-enable */
       })
-      .catch((err) => console.error(err));
+      .catch(() => this.$router.push({ name: 'home' }));
   },
   mounted() {
     document.title = '2022 Blockchain Wrapped';
