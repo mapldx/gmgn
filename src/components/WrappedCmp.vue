@@ -123,7 +123,7 @@
             <div class="mx-auto mt-6 max-w-3xl text-center">
               <a
                 class="relative text-md font-bold text-indigo-600 before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-left before:scale-x-0 before:bg-green-300 before:transition hover:before:scale-100"
-                :href="'https://twitter.com/intent/tweet?url=https%3A%2F%2Fyearin.gmgn.today%2F&via=mapldx&text=To%20date%2C%20I%27ve%20made%20' + this.number_tx + '%20total%20cross-chain%20transactions%20on%20the%20blockchain.%20Between%20' + this.total_chains + '%20chain(s)%2C%20a%20total%20of%20' + this.addresses_to.length + '%20wallets%20are%20on%20the%20receiving%20end%20of%20my%20dApp%20activities.%0a%0aInspired%20by%20Spotify%20Wrapped%2C%20get%20your%20own%202022%20blockchain%20wrapped%20at%3A'"
+                :href="'https://twitter.com/intent/tweet?url=https%3A%2F%2Fgmgn.today%2F&via=mapldx&text=To%20date%2C%20I%27ve%20made%20' + this.number_tx + '%20total%20cross-chain%20transactions%20on%20the%20blockchain.%20Between%20' + this.total_chains + '%20chain(s)%2C%20a%20total%20of%20' + this.addresses_to.length + '%20wallets%20are%20on%20the%20receiving%20end%20of%20my%20dApp%20activities.%0a%0aInspired%20by%20Spotify%20Wrapped%2C%20get%20your%20own%202022%20blockchain%20wrapped%20at%3A'"
               >
                 Share this with <i>frens</i> on Twitter →
               </a>
@@ -166,7 +166,7 @@
           <div class="mx-auto -mb-8 mt-6 max-w-3xl text-center">
             <a
               class="relative text-md font-bold text-indigo-600 before:absolute before:-bottom-1 before:h-0.5 before:w-full before:origin-left before:scale-x-0 before:bg-green-300 before:transition hover:before:scale-100"
-              :href="'https://twitter.com/intent/tweet?url=https%3A%2F%2Fyearin.gmgn.today%2F&via=mapldx&text=' + this.max_day + '%20was%20the%20most%20number%20of%20transactions%20I%27ve%20made%20in%20a%20day%20on%20the%20blockchain.%20I%27ve%20made%20at%20least%20one%20transaction%20a%20day%20on%20the%20blockchain%20for%20' + this.total_days + '%25%20of%20a%20year.%0a%0aInspired%20by%20Spotify%20Wrapped%2C%20get%20your%20own%202022%20blockchain%20wrapped%20at%3A'"
+              :href="'https://twitter.com/intent/tweet?url=https%3A%2F%2Fgmgn.today%2F&via=mapldx&text=' + this.max_day + '%20was%20the%20most%20number%20of%20transactions%20I%27ve%20made%20in%20a%20day%20on%20the%20blockchain.%20I%27ve%20made%20at%20least%20one%20transaction%20a%20day%20on%20the%20blockchain%20for%20' + this.total_days + '%25%20of%20a%20year.%0a%0aInspired%20by%20Spotify%20Wrapped%2C%20get%20your%20own%202022%20blockchain%20wrapped%20at%3A'"
             >
               Share this with <i>frens</i> on Twitter →
             </a>
