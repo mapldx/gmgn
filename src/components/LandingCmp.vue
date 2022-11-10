@@ -141,7 +141,7 @@ export default {
         { name: 'description', content: 'Inspired by Spotify Wrapped, gm/gn is a compilation of data about your cross-chain activity over the past year. Short for good morning/good night, gm/gn is a term to promote positivity and friendship among the Web 3 community.' },
         { property: 'og:url', content: 'https://gmgn.today' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:title', content: 'gmgn.today' },
+        { property: 'og:title', content: 'gm/gn: your 2022 blockchain wrapped' },
         { property: 'og:description', content: 'Inspired by Spotify Wrapped, gm/gn is a compilation of data about your cross-chain activity over the past year. Short for good morning/good night, gm/gn is a term to promote positivity and friendship among the Web 3 community.' },
         { property: 'og:image', content: 'https://i.imgur.com/KjNQjQu.png' },
         { name: 'twitter:card', content: 'summary_large_image' },
