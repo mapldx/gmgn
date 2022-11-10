@@ -79,7 +79,7 @@
           <form class="mt-8 grid grid-cols-6 gap-6" @submit.stop.prevent="submit">
             <div class="col-span-6">
               <label for="Email" class="block text-lg font-medium text-gray-700">
-                Your Ethereum Wallet Address
+                Your <b>Ethereum-based</b> wallet address
 
               <input
                 type="text"
@@ -87,14 +87,15 @@
                 name="address"
                 v-model="address"
                 class="mt-2 w-full rounded-md border-gray-300 bg-white text-xl text-gray-700 shadow-sm placeholder-gray-300"
-                placeholder="0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045"
+                placeholder="0x, ENS (.eth), Crossbell (.csb), Lens (.lens)"
               />
               </label>
+              <!-- eslint-disable -->
               <p class="mt-2 leading-relaxed text-gray-500 text-sm">
-                Supported formats: 0x (0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045), ENS (vitalik.eth), Crossbell (diygod.csb), Lens (stani.lens)
+                Feeling lucky? Try clicking one of <button class="text-cyan-500" @click="lucky('0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045')">0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045</button>, <button class="text-cyan-500" @click="lucky('vitalik.eth')">vitalik.eth</button>, <button class="text-cyan-500" @click="lucky('diygod.csb')">diygod.csb</button>, <button class="text-cyan-500" @click="lucky('stani.lens')">stani.lens</button>
               </p>
+              <!-- eslint-enable -->
             </div>
-
             <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
               <button
                 class="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-bold text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
@@ -162,6 +163,14 @@ export default {
         name: 'app',
         query: {
           address: this.address,
+        },
+      });
+    },
+    lucky(value) {
+      this.$router.push({
+        name: 'app',
+        query: {
+          address: value,
         },
       });
     },
