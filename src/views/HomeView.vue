@@ -5,6 +5,7 @@
 </template>
 
 <script>
+// @ is an alias to /src
 import LandingCmp from '@/components/LandingCmp.vue';
 
 export default {
