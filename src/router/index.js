@@ -13,10 +13,7 @@ const routes = [
   {
     path: '/export',
     name: 'export',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/ExportView.vue'),
+    component: () => import('../views/ExportView.vue'),
     props: (route) => ({
       top_chain: route.query.top_chain,
       total_days: route.query.total_days,
@@ -31,10 +28,7 @@ const routes = [
   {
     path: '/app',
     name: 'app',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AppView.vue'),
+    component: () => import('../views/AppView.vue'),
     props: (route) => ({ address: route.query.address }),
   },
 ];

@@ -119,7 +119,7 @@ export default {
 
               ctx.font = 'bold 12px Arial'
               ctx.fillStyle = '#8AAAE5'
-              wrapText(ctx, 'total transactions', 370, 220);
+              wrapText(ctx, '👌 total transactions', 370, 220);
 
               ctx.font = 'bold 55px Arial'
               ctx.fillStyle = '#FBEAEB'
@@ -143,11 +143,9 @@ export default {
           var words = text.toString().split(' ');
           var line = '';
 
-          //pull Y point : //depend on font size
           var perLine    = 4
           var lines_num  = parseInt(words.length / perLine)
               y =  y - (lines_num * 10)
-              //---end
 
           for(var n = 0; n < words.length; n++) {
               var testLine = line + words[n] + ' ';
