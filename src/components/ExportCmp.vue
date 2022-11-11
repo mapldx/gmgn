@@ -119,7 +119,7 @@ export default {
 
               ctx.font = 'bold 12px Arial'
               ctx.fillStyle = '#8AAAE5'
-              wrapText(ctx, '🧮 total transactions', 370, 220);
+              wrapText(ctx, '👌 total transactions', 370, 220);
 
               ctx.font = 'bold 55px Arial'
               ctx.fillStyle = '#FBEAEB'
