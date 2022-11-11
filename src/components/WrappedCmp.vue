@@ -36,12 +36,13 @@
             </p>
           </div>
 
-          <a class="mt-4 flex flex-col gap-4 sm:mt-0 sm:flex-row sm:items-center" :href="'https://etherscan.io/address/' + this.owner" target="_blank">
+          <a class="mt-4 flex flex-col gap-4 sm:mt-0 sm:flex-row sm:items-center" target="_blank">
             <button
               class="inline-flex items-center justify-center rounded-lg border border-gray-200 bg-white px-5 py-3 text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring"
               type="button"
+              @click="submit()"
             >
-              <span class="text-sm font-medium">View on Etherscan</span>
+              <span class="text-sm font-medium">Save as image</span>
 
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -527,6 +528,11 @@ export default {
         },
       },
       series: [],
+      top_chain: '',
+      on_1: '',
+      txs_on_1: '',
+      on_2: '',
+      txs_on_2: '',
     };
   },
   /* eslint-disable */
@@ -561,6 +567,21 @@ export default {
         }
       }
       return series;
+    },
+    submit() {
+      this.$router.push({
+        name: 'export',
+        query: {
+          top_chain: this.top_chain,
+          total_days: this.total_days,
+          on_1: this.on_1,
+          txs_on_1: this.txs_on_1,
+          on_2: this.on_2,
+          txs_on_2: this.txs_on_2,
+          number_tx: this.number_tx,
+          max_day: this.max_day,
+        },
+      });
     },
   },
   /* eslint-enable */
@@ -685,6 +706,72 @@ export default {
           i += 1;
         }
 
+        /* eslint-disable */
+
+        if (this.number_ethereum > this.top_chain) this.top_chain = 'Ethereum';
+        if (this.number_ethereum_classic > this.top_chain) this.top_chain = 'Ethereum Classic';
+        if (this.number_binance_smart_chain > this.top_chain) this.top_chain = 'Binance Smart Chain';
+        if (this.number_polygon > this.top_chain) this.top_chain = 'Polygon';
+        if (this.number_zksync > this.top_chain) this.top_chain = 'zkSync';
+        if (this.number_xdai > this.top_chain) this.top_chain = 'xDai';
+        if (this.number_arweave > this.top_chain) this.top_chain = 'Arweave';
+        if (this.number_arbitrum > this.top_chain) this.top_chain = 'Arbitrum';
+        if (this.number_optimism > this.top_chain) this.top_chain = 'Optimism';
+        if (this.number_fantom > this.top_chain) this.top_chain = 'Fantom';
+        if (this.number_avalanche > this.top_chain) this.top_chain = 'Avalanche';
+
+        if (this.number_ethereum > this.on_1) this.on_1 = 'Ethereum';
+        if (this.number_ethereum_classic > this.on_1) this.on_1 = 'Ethereum Classic';
+        if (this.number_binance_smart_chain > this.on_1) this.on_1 = 'Binance Smart Chain';
+        if (this.number_polygon > this.on_1) this.on_1 = 'Polygon';
+        if (this.number_zksync > this.on_1) this.on_1 = 'zkSync';
+        if (this.number_xdai > this.on_1) this.on_1 = 'xDai';
+        if (this.number_arweave > this.on_1) this.on_1 = 'Arweave';
+        if (this.number_arbitrum > this.on_1) this.on_1 = 'Arbitrum';
+        if (this.number_optimism > this.on_1) this.on_1 = 'Optimism';
+        if (this.number_fantom > this.on_1) this.on_1 = 'Fantom';
+        if (this.number_avalanche > this.on_1) this.on_1 = 'Avalanche';
+
+        if (this.number_ethereum > this.on_2 && 'Ethereum' !== this.on_1) this.on_2 = 'Ethereum';
+        if (this.number_ethereum_classic > this.on_2 && 'Ethereum Classic' !== this.on_1) this.on_2 = 'Ethereum Classic';
+        if (this.number_binance_smart_chain > this.on_2 && 'Binance Smart Chain' !== this.on_1) this.on_2 = 'Binance Smart Chain';
+        if (this.number_polygon > this.on_2 && 'Polygon' !== this.on_1) this.on_2 = 'Polygon';
+        if (this.number_zksync > this.on_2 && 'zkSync' !== this.on_1) this.on_2 = 'zkSync';
+        if (this.number_xdai > this.on_2 && 'xDai' !== this.on_1) this.on_2 = 'xDai';
+        if (this.number_arweave > this.on_2 && 'Arweave' !== this.on_1) this.on_2 = 'Arweave';
+        if (this.number_arbitrum > this.on_2 && 'Arbitrum' !== this.on_1) this.on_2 = 'Arbitrum';
+        if (this.number_optimism > this.on_2 && 'Optimism' !== this.on_1) this.on_2 = 'Optimism';
+        if (this.number_fantom > this.on_2 && 'Fantom' !== this.on_1) this.on_2 = 'Fantom';
+        if (this.number_avalanche > this.on_2 && 'Avalanche' !== this.on_1) this.on_2 = 'Avalanche';
+
+        if (this.on_2.length < 1) this.on_2 = "-";
+
+        if (this.on_1 === 'Ethereum') this.txs_on_1 = this.number_ethereum;
+        if (this.on_1 === 'Ethereum Classic') this.txs_on_1 = this.number_ethereum_classic;
+        if (this.on_1 === 'Binance Smart Chain') this.txs_on_1 = this.number_binance_smart_chain;
+        if (this.on_1 === 'Polygon') this.txs_on_1 = this.number_polygon;
+        if (this.on_1 === 'zkSync') this.txs_on_1 = this.number_zksync;
+        if (this.on_1 === 'xDai') this.txs_on_1 = this.number_xdai;
+        if (this.on_1 === 'Arweave') this.txs_on_1 = this.number_arweave;
+        if (this.on_1 === 'Arbitrum') this.txs_on_1 = this.number_arbitrum;
+        if (this.on_1 === 'Optimism') this.txs_on_1 = this.number_optimism;
+        if (this.on_1 === 'Fantom') this.txs_on_1 = this.number_fantom;
+        if (this.on_1 === 'Avalanche') this.txs_on_1 = this.number_avalanche;
+
+        if (this.on_2 === 'Ethereum') this.txs_on_2 = this.number_ethereum;
+        if (this.on_2 === 'Ethereum Classic') this.txs_on_2 = this.number_ethereum_classic;
+        if (this.on_2 === 'Binance Smart Chain') this.txs_on_2 = this.number_binance_smart_chain;
+        if (this.on_2 === 'Polygon') this.txs_on_2 = this.number_polygon;
+        if (this.on_2 === 'zkSync') this.txs_on_2 = this.number_zksync;
+        if (this.on_2 === 'xDai') this.txs_on_2 = this.number_xdai;
+        if (this.on_2 === 'Arweave') this.txs_on_2 = this.number_arweave;
+        if (this.on_2 === 'Arbitrum') this.txs_on_2 = this.number_arbitrum;
+        if (this.on_2 === 'Optimism') this.txs_on_2 = this.number_optimism;
+        if (this.on_2 === 'Fantom') this.txs_on_2 = this.number_fantom;
+        if (this.on_2 === 'Avalanche') this.txs_on_2 = this.number_avalanche;
+
+        if (this.on_2.length < 1) this.txs_on_2 = "-";
+
         if (this.number_ethereum > 0) this.total_chains += 1;
         if (this.number_ethereum_classic > 0) this.total_chains += 1;
         if (this.number_binance_smart_chain > 0) this.total_chains += 1;
@@ -697,8 +784,9 @@ export default {
         if (this.number_fantom > 0) this.total_chains += 1;
         if (this.number_avalanche > 0) this.total_chains += 1;
 
-        console.log('Retrieving data...');
+        /* eslint-enable */
 
+        console.log('Retrieving data...');
         /* eslint-disable */
 
         this.series.push({ name: 'Dec', data: this.generateData(12) });
