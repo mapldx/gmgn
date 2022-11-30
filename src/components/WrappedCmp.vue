@@ -551,14 +551,17 @@ export default {
         var x = `${i}`.toString();
         var y = 0;
         for (var j = 0; j < this.response.length; j += 1) {
-          var curr = this.response[j].timestamp;
+          try {
+            var curr = this.response[j].timestamp;
+            var format = date.parse(curr, "yyyy-MM-dd'T'HH:mm:ssXXX", new Date());
+            var mm = date.format(format, 'MM').replace(/\b0/g, '');
+            var dd = date.format(format, 'dd').replace(/\b0/g, '');
 
-          var format = date.parse(curr, "yyyy-MM-dd'T'HH:mm:ssXXX", new Date());
-          var mm = date.format(format, 'MM').replace(/\b0/g, '');
-          var dd = date.format(format, 'dd').replace(/\b0/g, '');
-
-          if (parseInt(mm, 10) === parseInt(month, 10) && parseInt(dd, 10) === parseInt(i, 10)) {
-            y += 1;
+            if (parseInt(mm, 10) === parseInt(month, 10) && parseInt(dd, 10) === parseInt(i, 10)) {
+              y += 1;
+            }
+          } catch (error) {
+            j++;
           }
         }
         series.push({
