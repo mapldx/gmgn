@@ -96,11 +96,8 @@
                 <dd v-if="loading" class="text-4xl font-extrabold text-blue-600 md:text-5xl">
                   <center><div class="loader mb-2"></div></center>
                 </dd>
-                <dd v-if="!loading && this.number_tx <= 500" class="text-4xl font-extrabold text-blue-600 md:text-5xl">
+                <dd v-if="!loading" class="text-4xl font-extrabold text-blue-600 md:text-5xl">
                   {{ this.number_tx }}
-                </dd>
-                <dd v-if="this.number_tx > 500" class="text-4xl font-extrabold text-blue-600 md:text-5xl">
-                  500+
                 </dd>
               </div>
 

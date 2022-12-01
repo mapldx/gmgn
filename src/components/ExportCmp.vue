@@ -36,6 +36,12 @@ export default {
   },
   mounted() {
     document.title = '2022 Blockchain Wrapped';
+    if (this.$route.query.txs_on_1 >= 500) {
+      this.$route.query.txs_on_1 = '500+'
+    }
+    if (this.$route.query.txs_on_2 >= 500) {
+      this.$route.query.txs_on_2 = '500+'
+    }
     this.canvas(this.$route.query.top_chain, this.$route.query.total_days, this.$route.query.on_1, this.$route.query.txs_on_1, this.$route.query.on_2, this.$route.query.txs_on_2,
       this.$route.query.number_tx, this.$route.query.max_day);
   },
